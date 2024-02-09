@@ -17,7 +17,5 @@ jobs:
           server: lx55.hoststar.hosting
           username: lukasneukom.ch
           password: ${{ secrets.FTP_PASSWORD }}
-          # port: 5544
-          # protocol: ftps
-          server-dir: /home/ch31310/web/elikia.ch/public_html/
+          server-dir: /elikia.ch/public_html/
           dry-run: true
