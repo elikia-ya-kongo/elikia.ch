@@ -19,5 +19,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           # port: 5544
           # protocol: ftps
-          server-dir: elikia.ch/public_html/
+          server-dir: /home/ch31310/web/elikia.ch/public_html/
           dry-run: true
