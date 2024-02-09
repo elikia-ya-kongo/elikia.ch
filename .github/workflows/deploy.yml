@@ -16,7 +16,7 @@ jobs:
         with:
           server: lx55.hoststar.hosting
           username: lukasneukom.ch
-          password: ${{ secrets.ftp_password }}
+          password: ${{ secrets.FTP_PASSWORD }}
           # port: 5544
           # protocol: ftps
           server-dir: elikia.ch/public_html/
