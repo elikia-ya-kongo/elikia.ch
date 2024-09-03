@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+/* GLOBAL VARIABLES */
+:root {
+  --primary: black;
+  --secondary: lightblue;
+}
+
 @font-face {
     font-display: swap;
     font-family: Barlow;
@@ -67,6 +73,26 @@ a, a:visited {
     color: black;
 }
 
+/* IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.trailing {
+  width: 480px;
+  float: right;
+  margin: 20px;
+  margin-right: 0;
+}
+
+.leading {
+  width: 480px;
+  float: left;
+  margin: 20px;
+  margin-left: 0;
+}
+
 /* NAVIGATION */
 nav {
     position: fixed;
@@ -74,7 +100,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    background-color: lightblue;
+    background-color: var(--secondary)
 }
 
 nav ul {
