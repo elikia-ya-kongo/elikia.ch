@@ -11,6 +11,7 @@
   --font-size-title: clamp(2rem, 1.6161rem + 1.9194vw, 3.5355rem);
   --line-height-text: sqrt(2);
   --line-height-heading: 1.1;
+  --measure: 70ch;
 }
 
 @font-face {
@@ -59,9 +60,9 @@ body {
   font-size: var(--font-size-regular);
   line-height: var(--line-height-text);
   margin: 0 auto;
-  max-width: 1000px;
-  min-width: 400px;
-  padding: 60px 40px 0;
+  max-width: var(--measure);
+  padding-block-start: calc(3 * var(--font-size-regular));
+  padding-inline: var(--font-size-regular);
   height: 100%;
 }
 
@@ -108,7 +109,7 @@ img {
 /* NAVIGATION */
 nav {
   position: fixed;
-  height: 60px;
+  height: calc(3 * var(--font-size-regular));
   top: 0;
   left: 0;
   right: 0;
@@ -119,9 +120,8 @@ nav ul {
   list-style-type: none;
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 20px;
-  min-width: 440px;
-  max-width: 1040px;
+  padding-inline: var(--font-size-regular);
+  max-width: var(--measure);
 }
 
 nav ul li {
@@ -131,7 +131,8 @@ nav ul li {
 nav ul li a {
   display: block;
   text-align: center;
-  padding: 20px 20px 16px;
+  margin-inline-end: var(--font-size-regular);
+  padding-block: var(--font-size-regular) var(--font-size-small);
   text-decoration: underline;
 }
 
@@ -146,9 +147,9 @@ nav a:hover {
 }
 
 .logo a {
-  font-size: 40px;
+  font-size: var(--font-size-extra-large);
   font-weight: 900;
-  padding: 4px 20px 8px;
+  padding-block-start: calc(var(--font-size-regular) / 4);
   text-decoration: none;
 }
 
