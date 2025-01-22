@@ -1,0 +1,19 @@
+{
+  "name": "elikia.ch",
+  "version": "0.1.0",
+  "description": "Website for the Swiss charity Elikia ya Kongo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elikia-ya-kongo/elikia.ch.git"
+  },
+  "author": "Lukas Neukom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elikia-ya-kongo/elikia.ch/issues"
+  },
+  "homepage": "https://github.com/elikia-ya-kongo/elikia.ch#",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "type": "module"
+}
