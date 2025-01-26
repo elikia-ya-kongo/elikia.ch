@@ -11,9 +11,12 @@
   "bugs": {
     "url": "https://github.com/elikia-ya-kongo/elikia.ch/issues"
   },
-  "homepage": "https://github.com/elikia-ya-kongo/elikia.ch#",
+  "homepage": "https://github.com/elikia-ya-kongo/elikia.ch",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy-navigation": "^0.3.5"
+  }
 }

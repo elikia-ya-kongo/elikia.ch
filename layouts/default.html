@@ -7,42 +7,48 @@
 <link rel=stylesheet href=/style.css>
 
 <meta name=author content="Elikia ya Kongo">
-<meta name=description content="">
+<meta name=description content="{{ description }}">
 
-<title>{{ title }}  - elikia</title>
+<title>{{ title }}{% unless page.url == "/" %} - elikia{% endunless %}</title>
 
-<a class=skip-link href=#main>Zum Inhalt</a>
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Elikia ya Kongo",
+  "url": "https://elikia.ch",
+  "logo": "https://elikia.ch/assets/logo-elikia-ya-kongo.png"
+}
+</script>
+{% endif %}
+
+<!-- <a class=skip-link href=#main>Zum Inhalt</a> -->
 
 <header>
   <nav>
-    <a class=logo href=#>elikia</a>
-    <ul>
-      <li><a href=/ziele/>Über uns</a>
-      <li><a href=/projekte/>Projekte</a>
-      <li><a href=/mithelfen/>Mithelfen</a>
-    </ul>
+    <a class=logo href=/>elikia</a>
+    {{ collections.navigation-top | eleventyNavigation | eleventyNavigationToHtml }}
   </nav>
 </header>
 
+<main id=main>
 {{ content }}
+</main>
 
 <footer>
+{{ collections.navigation-bottom | eleventyNavigation | eleventyNavigationToHtml }}
+
   <address>
     <p>Elikia ya Kongo
     <br>Knechtacherstrasse 9
     <br>8630 Rüti
-    <p>Tel <a href=tel:+41552602530>+41 55 260 25 30</a>
-    <br>Mail <a href=mailto:info@elikia.ch>info@elikia.ch</a>
+    <p>Tel: <a href=tel:+41552602530>+41 55 260 25 30</a>
+    <br>Mail: <a href=mailto:info@elikia.ch>info@elikia.ch</a>
   </address>
 
-  <p>Spendenkonto
+  <p>Spendenkonto:
   <br>PostFinance AG
   <br>BIC POFICHBEXXX
   <br>IBAN CH17 0900 0000 1620 7869 2
-
-  <ul>
-    <li><a href=/impressum/>Impressum</a>
-    <li><a href=/datenschutz/>Datenschutzerklärung</a>
-    <li><a href=/spenden/>Spenden</a>
-  </ul>
 </footer>

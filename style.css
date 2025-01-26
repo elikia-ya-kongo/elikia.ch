@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
 /* GLOBAL VARIABLES */
 :root {
   --font-family: Barlow, sans-serif;
@@ -55,14 +60,14 @@
 
 /* TYPOGRAPHY */
 body {
+  background: linear-gradient(oklch(95% 0.0025 360), oklch(100% 0 0));
+  /* display: flex;
+  flex-direction: column; */
   font-family: var(--font-family);
   font-size: var(--font-size-regular);
   line-height: var(--line-height-text);
-  margin: 0 auto;
-  max-width: 1000px;
-  min-width: 400px;
-  padding: 60px 40px 0;
-  height: 100%;
+  margin: 0;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,52 +91,61 @@ a, a:visited {
 }
 
 /* IMAGES */
-img {
+img, picture {
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
 .trailing {
-  width: 480px;
+  max-width: 40ch;
   float: right;
-  margin: 20px;
+  margin: 2ch;
   margin-right: 0;
 }
 
 .leading {
-  width: 480px;
+  max-width: 40ch;
   float: left;
-  margin: 20px;
+  margin: 2ch;
   margin-left: 0;
 }
 
 /* NAVIGATION */
+header {
+  backdrop-filter: blur(5px);
+  background-color: oklch(100% 0 0 / 90%);
+  border-bottom: 0.5px oklch(100% 0 0 / 95%) solid;
+  position: sticky;
+  top: 0px;
+}
+
 nav {
-  position: fixed;
-  height: 60px;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: lightblue; 
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  justify-content: flex-end;
+  margin: 0 auto;
+  max-inline-size: 70ch;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
 }
 
 nav ul {
+  display: flex;
+  gap: 1rem;
   list-style-type: none;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0 20px;
-  min-width: 440px;
-  max-width: 1040px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 nav ul li {
-  float: left;
+  text-wrap: nowrap;
 }
 
 nav ul li a {
-  display: block;
-  text-align: center;
-  padding: 20px 20px 16px;
   text-decoration: underline;
 }
 
@@ -142,13 +156,9 @@ nav a:hover {
 }
 
 .logo {
-  float: right;
-}
-
-.logo a {
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: 900;
-  padding: 4px 20px 8px;
+  margin-inline-start: auto;
   text-decoration: none;
 }
 
@@ -160,22 +170,32 @@ nav a:hover {
   font-style: italic;
 }
 
+/* MAIN CONTENT */
+/* main {
+  flex: 1;
+} */
+
+main, footer {
+  margin: 0 auto;
+  max-inline-size: 70ch;
+  padding-inline: 2ch;
+}
+
 /* FOOTER */
 footer {
+  background: oklch(95% 0.0025 360);
+  display: block flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+footer * {
   font-size: var(--font-size-small);
 }
 
 footer ul {
-  border-top: 1px solid;
-  border-color: lightgray;
   list-style-type: none;
-  margin-top: 40px;
-  padding: 20px 0;
-}
-
-footer ul li {
-  display: inline-block;
-  margin-right: 40px;
 }
 
 footer a {
