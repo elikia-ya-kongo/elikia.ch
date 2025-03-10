@@ -8,7 +8,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("pages/downloads/*.pdf");
+  eleventyConfig.addPassthroughCopy("pages/downloads/**/*.pdf");
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 };

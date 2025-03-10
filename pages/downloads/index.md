@@ -12,11 +12,12 @@ eleventyNavigation:
 
 # {{ title }}
 ## Jahresberichte
-- Jahresbericht 2024 _(folgt im Februar 2025)_
+- [Jahresbericht 2024](jahresbericht-elikia-2024.pdf)
 - [Jahresbericht 2023](jahresbericht-elikia-2023.pdf)
 
 ## Statuten und Reglemente
 - [Statuten](statuten-elikia-ya-kongo.pdf) vom 4. Juli 2023
+- [Finanzreglement](finanzreglement-elikia-ya-kongo.pdf) vom 25. Februar 2025
 
 ## Diverses
 - [Verfügung des Kantons Zürich zur Steuerbefreiung](steuerbefreiung-elikia.pdf) vom 18. Juli 2023
