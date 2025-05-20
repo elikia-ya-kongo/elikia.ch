@@ -1,5 +1,3 @@
-ISC License
-
 Copyright (c) 2025 Elikia ya Kongo
 
 Permission to use, copy, modify, and/or distribute this software for any
